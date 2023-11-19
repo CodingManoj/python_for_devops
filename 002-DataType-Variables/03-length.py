@@ -1,0 +1,2 @@
+inspire = "Python For DevOps"
+
