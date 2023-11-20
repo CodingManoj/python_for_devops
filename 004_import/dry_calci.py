@@ -1,19 +1,30 @@
 import sys
 
-def addition(a,b):
+def add(a,b):
     sum = a+b 
     return sum   
 
-def substraction(a,b):
+def sub(a,b):
     sub = b-a 
     return sub 
 
-def multiplication(a,b):
+def mul(a,b):
     mul = a*b
     return mul
 
 a = sys.argv[1]
-b = sys.argv[2]                  # Ensure you import the module
+operation = sys.argv[2]
+b = sys.argv[3]                  # Ensure you import the module
+
+if operation == "add" : 
+    output = add(a,b)
+    print(output)  
+elif operation == "sub" :
+    output = sub(a,b)
+    print(output)
+else:
+    output = mul(a,b)
+    print(output)
 
 # print("Value Of a+b", addition(5,10))
 # print("Value of b-a",substraction(100,200) )
