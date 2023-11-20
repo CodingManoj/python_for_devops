@@ -40,4 +40,4 @@ def multiplication(a,b)
 
 print("Value Of a+b", addition(5,10))
 print("Value of b-a",substraction(100,200) )
-print("Value of b*a",substraction(10,40) )
+print("Value of b*a",multiplication(10,40) )
