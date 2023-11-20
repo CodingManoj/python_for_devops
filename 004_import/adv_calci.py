@@ -1,5 +1,4 @@
 ''''
-
 Multie Line Comment In Python 
 
 a  = 100
@@ -35,5 +34,10 @@ def substraction(a,b):
     sub = b-a 
     return sub 
 
+def multiplication(a,b)
+    mul = a*b
+    return mul
+
 print("Value Of a+b", addition(5,10))
 print("Value of b-a",substraction(100,200) )
+print("Value of b*a",substraction(10,40) )
