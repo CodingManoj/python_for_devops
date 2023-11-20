@@ -8,5 +8,5 @@ elif color == "red" :
     print("Red cars are available") 
 elif color == "green" :
     print("Green cars are available") 
-else 
+else:
     print("Valid Color Options are Blue Green Red Only")
