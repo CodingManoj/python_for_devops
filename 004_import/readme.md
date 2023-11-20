@@ -62,3 +62,42 @@ $ python -m venv projetct-b           # This creates a folder called as project-
 $ python -m venv projetct-c           # This creates a folder called as project-c
 
 ```
+
+### How to switch to any specific virtual environment ?
+
+```
+
+ $ source project-c/bin/activate
+(project-c) @CodingManoj ➜ /workspaces/python_for_devops/004 (main) $ 
+
+Now whatever the packages that you install here are subjective to project-a and there won't be any conflict between the versions you install between the workspaces.
+
+Here is how we can come out of that virtual environment
+
+(project-c) @CodingManoj ➜ /workspaces/python_for_devops/004 (main) $  deactivate
+@CodingManoj ➜ /workspaces/python_for_devops/004 (main) $ 
+
+```
+
+> As we work with multiple developers, as a devops engineer we would be using more and more workSpaces.
+
+
+
+
+
+
+
+
+
+# Command Live Arg's vs Environment Variables
+
+$ python calci 10 plus 30    ( 10 is arg1, plus is arg2, 30 is arg3 )
+
+> using the default module sys.argv[1] we can take the values from the command line.
+
+The module we use here is to take command line arguments is `sys` which comes by default and you don't have to install with pip
+
+
+
+
+
