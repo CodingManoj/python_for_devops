@@ -34,7 +34,7 @@ def substraction(a,b):
     sub = b-a 
     return sub 
 
-def multiplication(a,b)
+def multiplication(a,b):
     mul = a*b
     return mul
 
