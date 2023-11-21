@@ -10,4 +10,4 @@ print("Printing length:", len(names))
 
 names.remove("steve")
 print("Printing length:", len(names))
-print("Printing list:", names))
+print("Printing list:", names)
