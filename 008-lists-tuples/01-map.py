@@ -5,3 +5,9 @@ names.append("christman")              # This append will only work for list, no
 print(names)
 print("Printing type:", type(names))
 print("Printing length:", len(names))
+
+# Removes an element from the list 
+
+names.remove("steve")
+print("Printing length:", len(names))
+print("Printing list:", names))
