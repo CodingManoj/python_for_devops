@@ -11,3 +11,12 @@ print("Printing length:", len(names))
 names.remove("steve")
 print("Printing length:", len(names))
 print("Printing list:", names)
+
+
+numbers = [10,15,30,11,12]
+numbers.sort()
+print(numbers)
+
+#Lists can also contains elements of various datatypes
+mychoice = ["manoj" ,10, "devops"]
+print(mychoice)
