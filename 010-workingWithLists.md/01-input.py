@@ -7,10 +7,14 @@ print("List of folders:", folders)
 for folder in folders:
     try:
         files = os.listdir(folder) 
-        print("------Available files in the given folder ----- :", files)
-    except: 
-        print("***** Ensure the directory name is value *****")
-
+        # print("------Available files in the given folder ----- :", files)
+        
+    except FileNotFoundError: 
+        print("$$$$$ Ensure the directory name is valid $$$$$ : ", folder)
+        continue
+    except PermissionError: 
+        print(" Ensure you don't select the root user profiles :", folder)
+        break 
     for file in files:
         print("*******:", file)
 
