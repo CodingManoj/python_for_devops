@@ -8,6 +8,7 @@ student_info = {
 
 print(student_info)
 
+# Dictionaries
 server_info = [
     {
         "name": "catalogue",
@@ -31,3 +32,5 @@ server_info = [
 
 print("Printing Component Info:", server_info[0])
 print("Printing Component Cloud:", server_info[0]["cloud"])
+
+# Python cannot perform operations directly on JSON Data, so converting to Diction or any native data type is a great approach!
