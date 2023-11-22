@@ -1,4 +1,4 @@
-# Just a record
+
 student_info = {
     "name": "manoj",
     "age": "32", 
@@ -8,7 +8,6 @@ student_info = {
 
 print(student_info)
 
-# Multiple Records
 server_info = [
     {
         "name": "catalogue",
@@ -29,3 +28,6 @@ server_info = [
         "cloud": "ali" 
     }
 ]
+
+print("Printing Component Info:", server_info[0])
+print("Printing Component Cloud:", server_info[0]["cloud"])
