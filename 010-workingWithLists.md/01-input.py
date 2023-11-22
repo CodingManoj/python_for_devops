@@ -14,7 +14,7 @@ for folder in folders:
         continue
     except PermissionError: 
         print(" Ensure you don't select the root user profiles :", folder)
-        break 
+        continue 
     for file in files:
         print("*******:", file)
 
