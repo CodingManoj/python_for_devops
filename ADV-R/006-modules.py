@@ -8,3 +8,9 @@
 import os 
 home_dir = os.environ["HOME"]            # functions in package os 
 print("Prints Home Direcotry Of the User running the script:", home_dir)
+
+# How to print a default value when the environment variable is not supposed 
+# If you don't supply :    export HOME1="/bla/blah" then None would be printed
+home_dir1 = os.getenv("HOME1", default=None)
+
+
