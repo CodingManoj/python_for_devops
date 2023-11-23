@@ -1,6 +1,6 @@
 # Let's execute shell commands using python
 # https://docs.python.org/3/library/os.html#os.system 
-# os.system is a function that can do all of OS Actions
+# os.system() is a function that can do all of OS Actions that's available in OS Module
 
 import os 
 command = "uptime" 
