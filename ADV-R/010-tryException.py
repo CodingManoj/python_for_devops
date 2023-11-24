@@ -22,8 +22,8 @@ except ValueError:
     print(" Input Error !!!!! Ensure both the supplied values are either int or float !!!!!!")    
 
 
-a_val= float(sys.argv[1])
-b_val= float(sys.argv[2])
+a_val= int(sys.argv[1])
+b_val= int(sys.argv[2])
 
 print("Value of a+b is", add(a_val, b_val))
 print("Different of a & b is", sub(a_val, b_val))
