@@ -5,12 +5,21 @@
 # import os 
 # command = "uptime" 
 # output = os.system(command)
-
 # print("System Update is:", output)
 
 
+
+
+
 import os 
-command = os.argv[1] 
+import sys
+command = sys.argv[1] 
+print("output of command *****", command, "***** is")
 output = os.system(command)
 
-print("Output Of The Command", command, output)
+# $ python 008-shell.py uptime
+#  00:09:32 up  1:25,  0 users,  load average: 0.30, 0.24, 0.35
+# 0
+# Here we are getting the output of the previous command as well.
+# How can I avoid that ?
+ 
