@@ -42,3 +42,6 @@ print("Different of a & b is", sub(a_val, b_val))
 #   File "/workspaces/python_for_devops/RGV/009-sysModule.py", line 24, in <module>
 #     b_val= float(sys.argv[2])
 # ValueError: could not convert string to float: 'a'
+
+
+# How to handle this, that's why EXCEPTION HANDLING COMES UP (010 for reference)
