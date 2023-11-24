@@ -12,4 +12,4 @@ try:
         sys.exit(0)
 except ValueError: 
     print('Not Integer')     
-    sys.exit(1)
+    sys.exit(1)                # Exit code 1 would be coming up
