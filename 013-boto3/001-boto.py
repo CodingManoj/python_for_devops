@@ -21,3 +21,12 @@
 
 # aws configure   ( enter access and secret key)
 # Now : pip install boto3 ( on your codeSpace )
+import boto3
+
+client = boto3.client('s3')
+
+response = client.create_bucket(
+    Bucket='manojp-pybucket-0121',
+)
+
+# python sc.py # this creates bycket
