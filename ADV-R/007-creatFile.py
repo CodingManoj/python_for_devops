@@ -13,4 +13,3 @@ with open("/tmp/py.py", "r") as readfile:
     filedata=readfile.read()
 
 print("Printing filedata\n\n", filedata)
-
