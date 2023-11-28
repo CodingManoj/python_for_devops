@@ -30,3 +30,21 @@ response = client.create_bucket(
 )
 
 # python sc.py # this creates bycket
+# Let's say how to get the ACL of this bucket ? searhc for acl in the documentation
+
+# https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3/client/get_bucket_acl.html
+
+response = client.get_bucket_acl(
+    Bucket='manojp-pybucket-0121',
+    ExpectedBucketOwner='string'                  
+)
+
+print(response)                           # gives json, conver to dictionary
+
+
+# boto3 also supports botocore that's used majorly for exception handling.
+# when you use boto3 , exception will be handled by default just like ansible
+
+# boto3 vs aws-cli 
+# boto3 plays major-role with serverless in aws.
+
