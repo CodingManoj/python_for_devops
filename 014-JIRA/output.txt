@@ -1,0 +1,61 @@
+[   {
+        "avatarUrls": {
+            "16x16": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10425?size=xsmall",
+            "24x24": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10425?size=small",
+            "32x32": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10425?size=medium",
+            "48x48": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10425"
+        },
+        "entityId": "1177b38a-c1b7-459f-91cc-6ef99846a964",
+        "expand": "description,lead,issueTypes,url,projectKeys,permissions,insight",
+        "id": "10000",
+        "isPrivate": false,
+        "key": "SCRUM",
+        "name": "My Scrum Project",
+        "projectTypeKey": "software",
+        "properties": {},
+        "self": "https://impachigolla.atlassian.net/rest/api/3/project/10000",
+        "simplified": true,
+        "style": "next-gen",
+        "uuid": "1177b38a-c1b7-459f-91cc-6ef99846a964"
+    },
+    {
+        "avatarUrls": {
+            "16x16": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413?size=xsmall",
+            "24x24": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413?size=small",
+            "32x32": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413?size=medium",
+            "48x48": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413"
+        },
+        "entityId": "d635da32-113e-4abf-af17-e3281474c263",
+        "expand": "description,lead,issueTypes,url,projectKeys,permissions,insight",
+        "id": "10001",
+        "isPrivate": false,
+        "key": "PD",
+        "name": "payment-devops",
+        "projectTypeKey": "software",
+        "properties": {},
+        "self": "https://impachigolla.atlassian.net/rest/api/3/project/10001",
+        "simplified": true,
+        "style": "next-gen",
+        "uuid": "d635da32-113e-4abf-af17-e3281474c263"
+    },
+    {
+        "avatarUrls": {
+            "16x16": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10416?size=xsmall",
+            "24x24": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10416?size=small",
+            "32x32": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10416?size=medium",
+            "48x48": "https://impachigolla.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10416"
+        },
+        "entityId": "1ef56896-b0d9-4ad9-94dd-077037eba432",
+        "expand": "description,lead,issueTypes,url,projectKeys,permissions,insight",
+        "id": "10002",
+        "isPrivate": false,
+        "key": "RAT",
+        "name": "ratings",
+        "projectTypeKey": "software",
+        "properties": {},
+        "self": "https://impachigolla.atlassian.net/rest/api/3/project/10002",
+        "simplified": true,
+        "style": "next-gen",
+        "uuid": "1ef56896-b0d9-4ad9-94dd-077037eba432"
+    }
+]

@@ -3,23 +3,30 @@
 import requests                              # Importing Requests Package
 from requests.auth import HTTPBasicAuth      # Importing HTTPBasciAuth Module for establishing authentication with app
 import json
+import os 
 
 url = "https://impachigolla.atlassian.net/rest/api/3/project"
 
-API_TOKEN="ATATT3xFfGF0rcMsyrbwA48hJrPmi8IilSO-bTOc9BS9H0dKU4LyvzJoYds6s30jLOknIjmbO42SNITxnymDziG2DPhB3LWtvi-Stlhs3GieCVwHw9Ni3QtJAZ1gjUaHWNhswFHuU5CLCgxO5vS76u5Xh_F2BlwX0XHciVQufw51Px7lPk6pNiE=39BCB547"
+API_TOKEN=os.getenv('TOKEN')
 
-
-auth = HTTPBasicAuth("impachigolla1992@example.com", API_TOKEN)
+auth = HTTPBasicAuth("impachigolla1992@gmail.com", API_TOKEN)
 
 headers = {
   "Accept": "application/json"
 }
 
-response = requests.request(
+response = requests.request(                 #  requests module is to establish authentication and authorization!!!
    "GET",
    url,
    headers=headers,
    auth=auth
 )
 
-print(json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": ")))
+# print(json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": ")))
+# Python offers the output as list, we need to convert that to dictionary then only we can make things queryable
+# print(response)
+output=json.loads(response.text)       #  json.loads() Converts list to a json, so that we can query
+
+
+project_name=output[1]["name"]
+print("Name Of The Project:", project_name)
