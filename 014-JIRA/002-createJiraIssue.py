@@ -24,7 +24,7 @@ payload = json.dumps( {
           "content": [
             {
               "text": "Jira Ticket From Py Script",
-              "type": "Jira Ticket From Py Script"
+              "type": "text"
             }
           ],
           "type": "paragraph"
