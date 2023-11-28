@@ -34,10 +34,10 @@ payload = json.dumps( {
       "version": 1
     },
     "project": {
-      "key": "PD"
+      "key": "RAT"
     },
     "issuetype": {
-      "id": "10006"
+      "id": "10011"
     },
     "summary": "Jira Ticket From Py Script",
   },
