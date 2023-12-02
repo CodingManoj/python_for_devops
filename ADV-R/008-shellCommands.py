@@ -8,9 +8,6 @@
 # print("System Update is:", output)
 
 
-
-
-
 import os 
 import sys
 command = sys.argv[1] 

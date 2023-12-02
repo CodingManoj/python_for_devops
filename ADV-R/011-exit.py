@@ -6,10 +6,8 @@ import sys
 print("Name of the script :", sys.argv[0])
 
 try:
-    def add(a,b):
-        sum = a + b 
-        return sum 
-        sys.exit(0)
+    sum = a + b 
+    return sum 
 except ValueError: 
     print('Not Integer')     
     sys.exit(1)                # Exit code 1 would be coming up
