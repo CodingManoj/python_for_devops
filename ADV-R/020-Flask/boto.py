@@ -11,9 +11,9 @@ op = ec2.describe_instances()["Reservations"]                     # This gives o
 
 for instance in op:
     for IID in instance["Instances"]:
-        print(instance_list.append(tabulate([ [IID["InstanceId"]],[IID["ImageId"]] ], tablefmt='orgtbl')))
+        instance_list.append(tabulate([ [IID["InstanceId"]],[IID["ImageId"]] ], tablefmt='orgtbl'))
 
-
+print(tabulate(instance_list,tablefmt='orgtbl'))
 # i-0191688df111a79de
 # i-047b2812fbff0245c
 # i-07650e27d53ec33b2
