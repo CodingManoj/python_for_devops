@@ -15,3 +15,6 @@ print(t)
 
 with open('/usr/share/nginx/html/sample.txt', 'w') as w:
     w.write(str(t))                                             # This writes the file to nginx, where we can access it from the nginx
+    
+    
+# Now we will put this on lambda and see how that works.
