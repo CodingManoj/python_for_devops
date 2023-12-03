@@ -1,5 +1,6 @@
 import boto3
 from prettytable import PrettyTable
+from flask import Flask  
 
 
 ec2 = boto3.client('ec2', region_name='us-east-1')       # If you want to handle s3, replace ec2 with s3 in the client
@@ -47,4 +48,15 @@ print(t)
 
 # Now let's send this output to a file so that it can be server over browser.
 with open('index.html', 'w') as file:
-    file.write(str(t))
+    file.write(str(t))    # Mention the type as str, if not file write won't happen
+
+
+
+from flask import Flask          # Just importing flask from the entire package
+# app = Flask(__name__)            # To initiate flask : flask is just a frameWork for python
+
+app = Flask(__name__,
+            static_url_path='', 
+            static_folder='./',)
+
+app.run('0.0.0.0', port=5001) 
