@@ -2,7 +2,7 @@ import boto3
 from tabulate import tabulate
 
 ec2 = boto3.client('ec2', region_name='us-east-1')       # If you want to handle s3, replace ec2 with s3 in the client
-
+instance_list = []
 # op = ec2.describe_instances()
 op = ec2.describe_instances()["Reservations"]                     # This gives only one server prop
 # Info is a map, so we need to write a loop  ---> How to get data from a list json in python
@@ -11,8 +11,7 @@ op = ec2.describe_instances()["Reservations"]                     # This gives o
 
 for instance in op:
     for IID in instance["Instances"]:
-        # print(IID["InstanceId"])
-        print(tabulate([ [IID["InstanceId"]],[IID["ImageId"]] ], tablefmt='orgtbl'))
+        print(instance_list.append(tabulate([ [IID["InstanceId"]],[IID["ImageId"]] ], tablefmt='orgtbl')))
 
 
 # i-0191688df111a79de
