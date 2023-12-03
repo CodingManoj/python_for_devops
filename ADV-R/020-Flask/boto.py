@@ -6,7 +6,7 @@ ec2 = boto3.client('ec2', region_name='us-east-1')       # If you want to handle
 op = ec2.describe_instances()["Reservations"]                     # This gives only one server prop
 # Info is a map, so we need to write a loop  ---> How to get data from a list json in python
 # op = ec2.describe_instances()["Reservations"]  
-print(op)
+# print(op)
 
 for instance in op:
     for IID in instance["Instances"]:
