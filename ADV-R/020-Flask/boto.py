@@ -10,4 +10,4 @@ op = ec2.describe_instances()["Reservations"]
 print(op)           # This gives the data in json, for easy querying, convert this to a Dictionary
 for item in op:
     for instance in op["Instances"]:
-        print(instance \n)
+        print(instance "\n")
