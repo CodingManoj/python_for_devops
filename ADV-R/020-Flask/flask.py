@@ -1,5 +1,4 @@
-from flask import Flask          # Just importing flask from the entire package
-# app = Flask(__name__)            # To initiate flask : flask is just a frameWork for python
+from flask import Flask          
 
 app = Flask(__name__,
             static_url_path='', 
