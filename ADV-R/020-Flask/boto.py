@@ -9,6 +9,6 @@ op = ec2.describe_instances()["Reservations"]
 print(op)
 
 for instance in op:
-    for id in ["Instances"]["InstanceId"]:
-        print("ID Of The Instance", ["InstanceId"] )
+    for id in instance["Instances"]:
+        print("ID Of The Instance", [["InstanceId"]])
     
