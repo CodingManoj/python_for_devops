@@ -8,8 +8,8 @@ op = ec2.describe_instances()["Reservations"]                     # This gives o
 # op = ec2.describe_instances()["Reservations"]  
 print(op)
 
-# for instance in op:
-#     for iid in instance["Instances"]:
-#         print(iid["InstanceId"])
+for instance in op:
+    for IID in instance["Instances"]:
+        print(IID["InstanceId"])
 
     
