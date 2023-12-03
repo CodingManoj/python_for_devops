@@ -8,11 +8,11 @@
 
 # let's run a sample flask
 
-from flask import Flask    
-app = Flask(__name__)
+from flask import Flask          # Just importing flask from the entire package
+app = Flask(__name__)            # To initiate flask : flask is just a frameWork for python
 
-@app.route("/")
+@app.route("/")                  # Decorator to accept only requests on / 
 def hello():
-    return 'HELLO WORLD'
+    return 'Sample Flask App'
 
 app.run('0.0.0.0') 
