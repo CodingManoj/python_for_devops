@@ -45,7 +45,7 @@ print(t)
 
 
 # Now let's send this output to a file so that it can be server over browser.
-with open('index.html', 'w') as file:
+with open('../index.html', 'w') as file:
     file.write(str(t))    # Mention the type as str, if not file write won't happen
 
 
