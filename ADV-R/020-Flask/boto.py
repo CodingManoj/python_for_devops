@@ -1,24 +1,36 @@
 import boto3
-from tabulate import tabulate
+from prettytable import PrettyTable
+
 
 ec2 = boto3.client('ec2', region_name='us-east-1')       # If you want to handle s3, replace ec2 with s3 in the client
 instance_list = []
 # op = ec2.describe_instances()
-op = ec2.describe_instances()["Reservations"]                     # This gives only one server prop
+out = ec2.describe_instances()["Reservations"]                     # This gives only one server prop
 # Info is a map, so we need to write a loop  ---> How to get data from a list json in python
 # op = ec2.describe_instances()["Reservations"]  
 # print(op)
 
-for instance in op:
-    for IID in instance["Instances"]:
-        instance_list.append([[IID["InstanceId"]],[IID["ImageId"]] ], tablefmt='orgtbl')
-
-print(tabulate(instance_list, tablefmt='orgtbl'))
-
-# i-0191688df111a79de
-# i-047b2812fbff0245c
-# i-07650e27d53ec33b2
-    
-# Let's print the output in tabular format python3
+# print(out)
+# for instances in out:
+#     for instance in instances["Instances"]: 
+#         print(instance["InstanceId"],instance["InstanceType"], instance["PrivateIpAddress"])
 
 
+# for instances in out: 
+#     for instance in instances["Instances"]:
+#         print("|", instance["InstanceId"], "|",  instance["PrivateIpAddress"], "|", instance["InstanceType"],  "|")
+
+t = PrettyTable(['InstanceID', 'PrivateIP', 'InstanceType'])
+for instances in out: 
+    for instance in instances["Instances"]:
+        t.add_row([instance["InstanceId"],instance["PrivateIpAddress"],instance["InstanceType"]])   
+print(t) 
+
+# ref : https://stackoverflow.com/questions/9535954/printing-lists-as-tabular-data
+# | i-0191688df111a79de | 172.31.39.172 | t3.micro |
+# | i-047b2812fbff0245c | 172.31.32.218 | t3.micro |
+# | i-07650e27d53ec33b2 | 172.31.42.225 | t3.micro |
+
+
+# But I want to add header to that ?
+# Google ---> Printing list as tabular data + Stackoverflow
