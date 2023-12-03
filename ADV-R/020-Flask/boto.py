@@ -45,8 +45,27 @@ print(t)
 
 
 # Now let's send this output to a file so that it can be server over browser.
-with open('../index.html', 'w') as file:
+# with open('../index.html', 'w') as file:
+#     file.write(str(t))    # Mention the type as str, if not file write won't happen
+    
+# 
+
+# But when accessed from the internet it prints the info text, not in a tabular format.
+# http://35.175.214.86:5001/index.html
+# +---------------------+---------------+--------------+ | InstanceID | PrivateIP | InstanceType | +---------------------+---------------+--------------+ | i-0191688df111a79de | 172.31.39.172 | t3.micro | | i-047b2812fbff0245c | 172.31.32.218 | t3.micro | | i-07650e27d53ec33b2 | 172.31.42.225 | t3.micro | +---------------------+---------------+--------------+
+# Google ---> python flask serve raw text file
+
+
+# You can either let flask server this file or can also also ask nginx to server this file
+# Place the index.html file as sample.txt and from browser IP/sample.txt 
+# +---------------------+---------------+--------------+
+# |      InstanceID     |   PrivateIP   | InstanceType |
+# +---------------------+---------------+--------------+
+# | i-0191688df111a79de | 172.31.39.172 |   t3.micro   |
+# | i-047b2812fbff0245c | 172.31.32.218 |   t3.micro   |
+# | i-07650e27d53ec33b2 | 172.31.42.225 |   t3.micro   |
+# +---------------------+---------------+--------------+
+
+
+with open('/usr/share/nginx/file.txt', 'w') as file:
     file.write(str(t))    # Mention the type as str, if not file write won't happen
-
-
-
