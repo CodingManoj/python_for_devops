@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # @app.route("/createJIRA")  # This is not a get type, it's a POST, so we need to specify the method :
-@app.route("/createJIRA", methods=['POST'])
+@app.route('/createJira', methods=['POST'])
 def createJIRA():        # get entire content from createJira 014
     url = "https://impachigolla.atlassian.net/rest/api/3/issue"
 
@@ -46,7 +46,7 @@ def createJIRA():        # get entire content from createJira 014
     },
     "update": {}
     } )
-
+    
     response = requests.request(
     "POST",
     url,
@@ -56,6 +56,8 @@ def createJIRA():        # get entire content from createJira 014
     )
 
     return json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": "))
+    # output=json.loads(response.text) 
+    
 
 app.run('0.0.0.0', port=5000)
 
@@ -63,5 +65,8 @@ app.run('0.0.0.0', port=5000)
 # Run this flask on your ec2
  
 # Now this will accept the reqeusts from the github
-# and create a webHook with
+# and create a webHook with the below endPoint and select the actions as IssueComments
 # http://serverIP:5000/createJIRA
+
+
+
