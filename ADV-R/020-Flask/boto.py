@@ -10,6 +10,6 @@ print(op)
 
 for instance in op:
     for iid in instance["Instances"]:
-        print(ami["ImageId"])
+        print(iid["InstanceId"])
 
     
