@@ -4,4 +4,17 @@
 
 # First, let's serve the sample application using sample hello world.
 # Google ---> Python Hello World Web Program
+# ( Let's deploy an application on flast )
+
+# let's run a sample flask
+
+from flask import Flask 
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return 'HELLO WORLD'
+
+app.run('0.0.0.0') 
 
