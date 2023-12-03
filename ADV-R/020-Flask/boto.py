@@ -1,4 +1,5 @@
 import boto3
+from tabulate import tabulate
 
 ec2 = boto3.client('ec2', region_name='us-east-1')       # If you want to handle s3, replace ec2 with s3 in the client
 
@@ -10,6 +11,14 @@ op = ec2.describe_instances()["Reservations"]                     # This gives o
 
 for instance in op:
     for IID in instance["Instances"]:
-        print(IID["InstanceId"])
+        # print(IID["InstanceId"])
+        print(tabulate([['InstanceID', IID["InstanceId"] ]]))
 
+
+# i-0191688df111a79de
+# i-047b2812fbff0245c
+# i-07650e27d53ec33b2
     
+# Let's print the output in tabular format python3
+
+
