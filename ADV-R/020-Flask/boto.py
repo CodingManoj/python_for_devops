@@ -8,10 +8,7 @@ ec2 = boto3.client('ec2', region_name='us-east-1')       # If you want to handle
 op = ec2.describe_instances()["Reservations"]  
 print(op)
 
-# for instance in op:
-#     for id in ["Instances"]["InstanceId"]:
-#         print("ID Of The Instance",)
+for instance in op:
+    for id in ["Instances"]["InstanceId"]:
+        print("ID Of The Instance", ["InstanceId"] )
     
-# for instance in reservation["Instances"]
-#     ec2 = boto3.resource('ec2')
-#     specificinstance = ec2.Instance(instance["InstanceId"])
