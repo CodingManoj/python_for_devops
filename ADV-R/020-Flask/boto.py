@@ -24,11 +24,11 @@ out = ec2.describe_instances()["Reservations"]                     # This gives 
 # | i-07650e27d53ec33b2 | 172.31.42.225 | t3.micro |
 
 
-t = PrettyTable(['InstanceID', 'PrivateIP', 'InstanceType'])
-for instances in out: 
-    for instance in instances["Instances"]:
-        t.add_row([instance["InstanceId"],instance["PrivateIpAddress"],instance["InstanceType"]])   
-print(t) 
+# t = PrettyTable(['InstanceID', 'PrivateIP', 'InstanceType'])
+# for instances in out: 
+#     for instance in instances["Instances"]:
+#         t.add_row([instance["InstanceId"],instance["PrivateIpAddress"],instance["InstanceType"]])   
+# print(t) 
 
 # +---------------------+---------------+--------------+
 # |      InstanceID     |   PrivateIP   | InstanceType |
@@ -44,9 +44,9 @@ print(t)
 # Google ---> Printing list as tabular data + Stackoverflow
 
 
-# Now let's send this output to a file so that it can be server over browser.
-# with open('../index.html', 'w') as file:
-#     file.write(str(t))    # Mention the type as str, if not file write won't happen
+Now let's send this output to a file so that it can be server over browser.
+with open('../sample.txt', 'w') as file:
+    file.write(str(t))    # Mention the type as str, if not file write won't happen
     
 # 
 
@@ -67,5 +67,18 @@ print(t)
 # +---------------------+---------------+--------------+
 
 
-with open('/usr/share/nginx/file.txt', 'w') as file:
-    file.write(str(t))    # Mention the type as str, if not file write won't happen
+# So whenever we schedule this and this generates the sample.txt and can server over nginx.
+
+# Also when you terminate any server, during that time script will fail as it can't find that information and we need to hand this!!!
+# May be if the state is Terminate, then just continue  ( )
+
+t = PrettyTable(['InstanceID', 'PrivateIP', 'InstanceType'])
+for instances in out: 
+    for instance in instances["Instances"]:
+        if instance["State"]["Name"] == "terminated":
+            continue
+        t.add_row([instance["InstanceId"],instance["PrivateIpAddress"],instance["InstanceType"]])   
+print(t) 
+
+with open('/usr/share/nginx/html/sample.txt', 'w') as w:
+    w.write(str(t))                                             # This writes the file to nginx, where we can access it from the nginx
