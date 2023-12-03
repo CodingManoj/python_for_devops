@@ -23,9 +23,4 @@ app = Flask(__name__,
             static_url_path='', 
             static_folder='./')
 
-
-@app.route("/")                  # Decorator to accept only requests on / 
-def hello():
-    return 'Sample Flask App'
-
 app.run('0.0.0.0', port=5001) 
