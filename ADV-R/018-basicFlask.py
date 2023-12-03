@@ -7,6 +7,7 @@
 # ( Let's deploy an application on flast )
 
 # let's run a sample flask
+# pip3 install flask
 
 from flask import Flask          # Just importing flask from the entire package
 app = Flask(__name__)            # To initiate flask : flask is just a frameWork for python
@@ -15,4 +16,4 @@ app = Flask(__name__)            # To initiate flask : flask is just a frameWork
 def hello():
     return 'Sample Flask App'
 
-app.run('0.0.0.0') 
+app.run('0.0.0.0', port=5001) 
