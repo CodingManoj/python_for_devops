@@ -44,9 +44,9 @@ out = ec2.describe_instances()["Reservations"]                     # This gives 
 # Google ---> Printing list as tabular data + Stackoverflow
 
 
-Now let's send this output to a file so that it can be server over browser.
-with open('../sample.txt', 'w') as file:
-    file.write(str(t))    # Mention the type as str, if not file write won't happen
+# Now let's send this output to a file so that it can be server over browser.
+# with open('../sample.txt', 'w') as file:
+#     file.write(str(t))    # Mention the type as str, if not file write won't happen
     
 # 
 
@@ -70,6 +70,13 @@ with open('../sample.txt', 'w') as file:
 # So whenever we schedule this and this generates the sample.txt and can server over nginx.
 
 # Also when you terminate any server, during that time script will fail as it can't find that information and we need to hand this!!!
+
+# When any of the server is in terminated state
+
+#   File "boto.py", line 30, in <module>
+#     t.add_row([instance["InstanceId"],instance["PrivateIpAddress"],instance["InstanceType"]])
+# KeyError: 'PrivateIpAddress'
+
 # May be if the state is Terminate, then just continue  ( )
 
 t = PrettyTable(['InstanceID', 'PrivateIP', 'InstanceType'])
