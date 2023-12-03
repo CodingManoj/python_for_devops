@@ -8,3 +8,6 @@ ec2 = boto3.client('ec2', region_name='us-east-1')       # If you want to handle
 op = ec2.describe_instances()["Reservations"]  
 
 print(op)           # This gives the data in json, for easy querying, convert this to a Dictionary
+for item in op:
+    for data_item in item['InstanceId']:
+        print data_item['name']
