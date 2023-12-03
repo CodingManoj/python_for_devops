@@ -6,10 +6,8 @@
 # ec2 describe instances boto3
 
 import boto3
-import sys 
 
 ec2 = boto3.client('ec2', region_name='us-east-1')       # If you want to handle s3, replace ec2 with s3 in the client
-count=int(sys.argv[1])
 
 output=ec2.describe_instances()                                 # We are not using any filters
 print(output)
