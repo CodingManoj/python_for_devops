@@ -10,5 +10,5 @@ print(op)
 
 for instance in op:
     for id in instance["Instances"]:
-        print("ID Of The Instance", [["InstanceId"]])
+        print("ID Of The Instance", ["InstanceId"])
     
